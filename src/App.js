@@ -5,9 +5,18 @@ import TitleSimple from './components/TitleSimple';
 import ButtonLike from './components/ButtonLike';
 
 import StateFullComponent from './components/StateFullComponent';
+import Props from './pages/Props';
+import StateObject from './pages/StateObject';
+
+// exercise
+import ComposeComponent from './exercise/ComposeComponent';
+import ReactBoxes from './exercise/ReactBoxes';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [count, setCount] = React.useState(1);
+
+
 
   // variable render html
   const element1 = (
@@ -101,6 +110,19 @@ function App() {
       <h2>State full component</h2>
       <StateFullComponent />
 
+      <h2> Props </h2>
+      <Props count={count} />
+
+
+      <h2>State Object</h2>
+      <StateObject />
+
+      <h2>Exercise</h2>
+      <h3>Compose Component</h3>
+      <ComposeComponent />
+
+      <h3>ReactBoxes</h3>
+      <ReactBoxes />
 
       <br />
       <br />
