@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Typoraphy({ text }) {
-
-  console.log('Typoraphy: ', text)
 
   return (
     <div>{text}</div>
