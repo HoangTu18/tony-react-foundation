@@ -24,9 +24,13 @@ function Boxes() {
                 // }}
             />
 
-            <Typoraphy 
+            {name && (
+              <Typoraphy 
                 text={`Hello: ${name}`}
-            />
+              />
+            )}
+
+           
         </div>
     )
 }

@@ -7,6 +7,7 @@ import ButtonLike from './components/ButtonLike';
 import StateFullComponent from './components/StateFullComponent';
 import Props from './pages/Props';
 import StateObject from './pages/StateObject';
+import ConditionalRender from './pages/ConditionalRender';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -123,6 +124,9 @@ function App() {
 
       <h3>ReactBoxes</h3>
       <ReactBoxes />
+
+      <h3>Conditional Render</h3>
+      <ConditionalRender />
 
       <br />
       <br />
