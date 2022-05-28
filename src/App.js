@@ -8,10 +8,12 @@ import StateFullComponent from './components/StateFullComponent';
 import Props from './pages/Props';
 import StateObject from './pages/StateObject';
 import ConditionalRender from './pages/ConditionalRender';
+import Styleling from './pages/Styleling';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
 import ReactBoxes from './exercise/ReactBoxes';
+import LiftingStateUp from './exercise/LiftingStateUp';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -118,6 +120,10 @@ function App() {
       <h2>State Object</h2>
       <StateObject />
 
+
+      <h3>Styleling</h3>
+      <Styleling />
+
       <h2>Exercise</h2>
       <h3>Compose Component</h3>
       <ComposeComponent />
@@ -127,6 +133,9 @@ function App() {
 
       <h3>Conditional Render</h3>
       <ConditionalRender />
+
+      <h3>Lifting State Up</h3>
+      <LiftingStateUp />
 
       <br />
       <br />
