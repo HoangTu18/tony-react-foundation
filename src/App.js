@@ -9,6 +9,7 @@ import Props from './pages/Props';
 import StateObject from './pages/StateObject';
 import ConditionalRender from './pages/ConditionalRender';
 import Styleling from './pages/Styleling';
+import Form from './pages/Form';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -136,6 +137,8 @@ function App() {
 
       <h3>Lifting State Up</h3>
       <LiftingStateUp />
+
+      <Form />
 
       <br />
       <br />
