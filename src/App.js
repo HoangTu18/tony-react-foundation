@@ -15,6 +15,7 @@ import Form from './pages/Form';
 import ComposeComponent from './exercise/ComposeComponent';
 import ReactBoxes from './exercise/ReactBoxes';
 import LiftingStateUp from './exercise/LiftingStateUp';
+import Hooks from './pages/Hooks';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -139,6 +140,9 @@ function App() {
       <LiftingStateUp />
 
       <Form />
+
+      <h3>React hooks</h3>
+      <Hooks />
 
       <br />
       <br />
