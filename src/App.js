@@ -16,6 +16,7 @@ import ComposeComponent from './exercise/ComposeComponent';
 import ReactBoxes from './exercise/ReactBoxes';
 import LiftingStateUp from './exercise/LiftingStateUp';
 import Hooks from './pages/Hooks';
+import ColorBox from './exercise/ColorBox';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -144,6 +145,9 @@ function App() {
       <h3>React hooks</h3>
       <Hooks />
 
+      <h3>ColorBox exercise</h3>
+      <ColorBox />
+      
       <br />
       <br />
       <br /><br /><br /><br /><br /><br /><br />

@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+.colorBox > div {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+}
+.red {
+  background: red;
+}
+.gold {
+  background: gold;
+}
+.cyan {
+  background: aqua;
+}
+.magenta {
+  background: magenta;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  opacity: 0;
+}
