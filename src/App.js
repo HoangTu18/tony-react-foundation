@@ -10,6 +10,7 @@ import StateObject from './pages/StateObject';
 import ConditionalRender from './pages/ConditionalRender';
 import Styleling from './pages/Styleling';
 import Form from './pages/Form';
+import UserReducer from './pages/UserReducer';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -147,6 +148,9 @@ function App() {
 
       <h3>ColorBox exercise</h3>
       <ColorBox />
+
+      <h3> useReducer hooks</h3>
+      <UserReducer />
       
       <br />
       <br />
