@@ -11,6 +11,7 @@ import ConditionalRender from './pages/ConditionalRender';
 import Styleling from './pages/Styleling';
 import Form from './pages/Form';
 import UserReducer from './pages/UserReducer';
+import UseRef from './pages/UseRef';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -143,7 +144,7 @@ function App() {
 
       <Form />
 
-      <h3>React hooks</h3>
+      <h3>React hooks & memo</h3>
       <Hooks />
 
       <h3>ColorBox exercise</h3>
@@ -151,6 +152,9 @@ function App() {
 
       <h3> useReducer hooks</h3>
       <UserReducer />
+
+      <h3>useRef</h3>
+      <UseRef />
       
       <br />
       <br />

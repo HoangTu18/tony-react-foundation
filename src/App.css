@@ -59,7 +59,7 @@
   background: magenta;
 }
 
-input {
+.colorBox input {
   position: absolute;
   top: 0;
   left: 0;

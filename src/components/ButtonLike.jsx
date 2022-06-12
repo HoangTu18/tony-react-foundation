@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import styles from './buttonLink.module.css';
 
 function ButtonLike({ text = 'Submit', name, ...props }) {
-  console.log('button like')
+  console.log('button like: ', text , name)
   return (
     <div>
       <button 
@@ -17,4 +17,8 @@ function ButtonLike({ text = 'Submit', name, ...props }) {
   )
 }
 
-export default ButtonLike
+function areEqual(prevProps, nextProps) {
+  return prevProps.name === nextProps.name
+}
+
+export default memo(ButtonLike, areEqual)
