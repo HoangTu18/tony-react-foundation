@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import TodosHooksContext from '../exercise/TodosHooksContext';
 
 import ButtonLike from '../components/ButtonLike';
+import { useMemo } from 'react';
+
 
 function Hooks() {
   const [todos, setTodos] = React.useState([]);
@@ -10,6 +12,8 @@ function Hooks() {
     name: 'memo',
     text: 'Submit'
   })
+
+const isPagination = 1;
 
   //  check logic todo
   React.useEffect(() => {
@@ -21,23 +25,36 @@ function Hooks() {
           return {
             // name: `name button-${Math.random()}`,
             ...prevState,
-            text: `fetch todo-${Math.random()}`
+            // text: `fetch todo-${Math.random()}`
           }
         })
       })
   }, [page])
 
-  console.log('nameButton', nameButton)
-
   React.useEffect(() => {
     console.log('useeffect 2')
   }, [])
+
+
+  const isPage = useMemo(() => {
+    return isPagination === 1;
+  }, []) 
+
+  console.log("isPage: ", isPage)
+
 
   // function fetchTodos() {
   //   fetch(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10`)
   //     .then(res => res.json())
   //     .then(data => setTodos(data))
   // }
+
+  const handlePreventCallback = useCallback(() => {
+    // do something
+    if(page > 3) {
+      console.log('handlePreventCallback: ');
+    }
+  }, [page])
 
   return (
     <div>
@@ -57,23 +74,24 @@ function Hooks() {
     )}
 
     page: <input type="text" value={page} onChange={e => setPage(Number(e.target.value))}/>
-
-
     <button type="button" onClick={() => {
       setPage(prevState => prevState + 1)
     }}>
       page {page}
     </button>
 
+    <h4>memo + useCallback button like</h4>
+    <ButtonLike 
+      name={nameButton.name}
+      text={nameButton.text}
+      onClick={handlePreventCallback}
+    />
+
     <h3> Use Context </h3>
     <TodosHooksContext />
 
 
-    <h4>memo button like</h4>
-    <ButtonLike 
-      name={nameButton.name}
-      text={nameButton.text}
-    />
+   
     <br />
     </div>
   )

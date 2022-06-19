@@ -17,8 +17,8 @@ function ButtonLike({ text = 'Submit', name, ...props }) {
   )
 }
 
-function areEqual(prevProps, nextProps) {
-  return prevProps.name === nextProps.name
-}
+// function areEqual(prevProps, nextProps) {
+//   return prevProps.name === nextProps.name
+// }
 
-export default memo(ButtonLike, areEqual)
+export default memo(ButtonLike)

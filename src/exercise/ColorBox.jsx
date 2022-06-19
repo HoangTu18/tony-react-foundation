@@ -1,6 +1,8 @@
 import React from "react";
 import size from "./colorsBox.module.css";
 
+import { useResizeWindow } from '../hooks/useResizeWindow';
+
 const Box = ({ text, value, changeColor }) => {
   return (
     <button
@@ -15,6 +17,8 @@ const Box = ({ text, value, changeColor }) => {
 };
 
 const ColorsBox = () => {
+  const { onSmallScreen } = useResizeWindow();
+
   const [colors, setColors] = React.useState({
     color1: "red",
     color2: "gold",
@@ -81,6 +85,7 @@ const ColorsBox = () => {
         value={colors.color4}
         changeColor={changeColor}
       />
+      Box: {onSmallScreen ? "small" : "large"}
     </div>
   );
 };

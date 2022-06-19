@@ -12,6 +12,8 @@ import Styleling from './pages/Styleling';
 import Form from './pages/Form';
 import UserReducer from './pages/UserReducer';
 import UseRef from './pages/UseRef';
+import ReactPortal from './pages/ReactPortal';
+import ResizeComponent from './pages/ResizeComponent';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -155,7 +157,13 @@ function App() {
 
       <h3>useRef</h3>
       <UseRef />
-      
+
+      <h3>React Portal</h3>
+      <ReactPortal />
+
+
+      <h3>Custom Hook</h3>
+      <ResizeComponent />
       <br />
       <br />
       <br /><br /><br /><br /><br /><br /><br />
