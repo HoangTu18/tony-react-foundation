@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Route, Routes, Link, NavLink } from 'react-router-dom';
 
 import TitleSimple from './components/TitleSimple';
 import ButtonLike from './components/ButtonLike';
@@ -14,6 +15,10 @@ import UserReducer from './pages/UserReducer';
 import UseRef from './pages/UseRef';
 import ReactPortal from './pages/ReactPortal';
 import ResizeComponent from './pages/ResizeComponent';
+import Authenticate from './pages/Authenticate';
+
+import ContactUs from './pages/ContactUs';
+import About from './pages/About';
 
 // exercise
 import ComposeComponent from './exercise/ComposeComponent';
@@ -62,6 +67,22 @@ function App() {
 
   return (  
     <div className="App">
+
+    <h1>React router dom</h1>
+    <nav>
+      <Link to="/contact/1">Contact</Link> |{" "}
+      <Link to="about">About</Link>
+    </nav>
+
+    <Routes>
+        <Route 
+          path="/about" element={<About />}
+        />
+        <Route 
+          path="/contact/:id/:slug" element={<ContactUs />}
+        />
+    </Routes>
+      
       {/* expression in jsx */}
       {isLoading ? (
         <TitleSimple 
@@ -164,6 +185,9 @@ function App() {
 
       <h3>Custom Hook</h3>
       <ResizeComponent />
+
+      <h3>Authenticate</h3>
+      <Authenticate />
       <br />
       <br />
       <br /><br /><br /><br /><br /><br /><br />

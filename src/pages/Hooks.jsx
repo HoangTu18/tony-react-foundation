@@ -17,6 +17,8 @@ const isPagination = 1;
 
   //  check logic todo
   React.useEffect(() => {
+    console.log('useeffect 2')
+    
     fetch(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10`)
       .then(res => res.json())
       .then(data =>{
@@ -29,10 +31,17 @@ const isPagination = 1;
           }
         })
       })
+      return () => {
+        console.log('clean up useEffect  2')
+      }
   }, [page])
 
   React.useEffect(() => {
     console.log('useeffect 2')
+
+    return () => {
+      console.log('clean up useEffect  2')
+    }
   }, [])
 
 
